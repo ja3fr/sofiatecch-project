@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Acknowledge Data Packet",
+        "trigger": "DATA,",
+        "mode": "ASCII",
+        "response": "ACK_DATA\\n",
+        "response_mode": "ASCII",
+        "enabled": false
+    },
+    {
+        "name": "script test",
+        "trigger": "PING\\n",
+        "mode": "ASCII",
+        "response": "PONG\\n",
+        "response_mode": "ASCII",
+        "enabled": false
+    },
+    {
+        "name": "test ok",
+        "trigger": "6F 6B 0A",
+        "mode": "HEX",
+        "response": "64 6F 6E 65",
+        "response_mode": "HEX",
+        "enabled": false
+    },
+    {
+        "name": "Répondre à QUERY",
+        "trigger": "QUERY",
+        "mode": "ASCII",
+        "response": "jawek behi",
+        "response_mode": "ASCII",
+        "enabled": false
+    },
+    {
+        "name": "eee",
+        "trigger": "aeza",
+        "mode": "ASCII",
+        "answer": "eeee",
+        "anwser_mode": "ASCII",
+        "enabled": true
+    },
+    {
+        "name": "aa",
+        "trigger": "aaa",
+        "mode": "ASCII",
+        "response": "aaaaaa",
+        "response_mode": "ASCII",
+        "enabled": true
+    }
+]

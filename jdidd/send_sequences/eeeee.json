@@ -1,0 +1,22 @@
+[
+    {
+        "name": "aeze",
+        "sequence": "eazeze",
+        "mode": "ASCII"
+    },
+    {
+        "name": "test",
+        "sequence": "help",
+        "mode": "ASCII"
+    },
+    {
+        "name": "status",
+        "sequence": "1",
+        "mode": "ASCII"
+    },
+    {
+        "name": "help",
+        "sequence": "help",
+        "mode": "ASCII"
+    }
+]

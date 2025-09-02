@@ -1,0 +1,697 @@
+{
+  "cartes": {
+    "menzu_ijen_samd21j18a": {
+      "ZigBee": {
+        "TYPE": {
+          "label": "Type de ZigBee",
+          "type": "choice",
+          "choices": {
+            "0": "S2X",
+            "1": "XBee3",
+            "2": "SX868"
+          },
+          "access": "getset"
+        },
+        "ROLE": {
+          "label": "Rôle du module",
+          "type": "choice",
+          "choices": {
+            "0": "COORDINATOR",
+            "1": "ROUTER",
+            "2": "END DEVICE"
+          },
+          "access": "getset"
+        },
+        "CTRLACK": {
+          "label": "ACK Active",
+          "type": "choice",
+          "choices": {
+            "0": "DISABLED",
+            "1": "ENABLED"
+          },
+          "access": "getset"
+        },
+        "PANID": {
+          "label": "PAN ID",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "LoRaWAN_at": {
+    "APPKEY": { "label": "Application Key",            "type": "text",   "access": "getset" },
+    "DEUI":   { "label": "DeviceEUI (and JoinEUI)",    "type": "text",   "access": "getset" },
+    "NWKKEY": { "label": "NwkKey",                      "type": "text",   "access": "getset" },
+
+    "ACT":    { "label": "Activation",                  "type": "choice", "access": "getset",
+                "choices": { "0": "ABP", "1": "OTAA" } },
+
+    "CLASS":  { "label": "Class",                       "type": "choice", "access": "getset",
+                "choices": { "0": "Class A", "1": "Class B", "2": "Class C" } },
+
+    "NJS":    { "label": "Join Status",                 "type": "choice", "access": "get",
+                "choices": { "0": "Not joined", "1": "Joined" } },
+
+    "CFM":    { "label": "Confirmed Mode",              "type": "choice", "access": "getset",
+                "choices": { "0": "Unconfirmed", "1": "Confirmed" } }
+  },
+      "GPRS ": {
+        "APN": {
+          "label": "APN Réseau",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "MODBUS_Master": {
+        "PORT": {
+          "label": "Port",
+          "type": "text",
+          "access": "get"
+        },
+         "HOST":   { "label": "Host",   "type": "text",   "access": "getset" }
+,
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+      "MODBUS_Slave": {
+
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+     "GPS": {
+  "UTC_OFFSET": {
+    "label": "Timezone UTC offset",
+    "type": "text",
+    "access": "getset"
+  },
+  "SYNC_PERIOD": {
+    "label": "Synchronization period (min)",
+    "type": "text",
+    "access": "getset"
+  },
+  "TIME": {
+    "label": "Time (ISO-8601: YYYY-MM-DDThh:mm:ss)",
+    "type": "text",
+    "access": "get"
+  },
+  "LOCATION": {
+    "label": "Location (ISO-6709: +/-DDDMMSS.S+/-DDDMMSS.S/)",
+    "type": "text",
+    "access": "get"
+  }
+}
+,
+    "NVM": {
+  "MAX_LOG1":   { "label": "Max Log 1",   "type": "text", "access": "get" },
+  "MAX_LOG2":   { "label": "Max Log 2",   "type": "text", "access": "get" },
+  "MAX_LOG3":   { "label": "Max Log 3",   "type": "text", "access": "get" },
+  "MAX_LOG4":   { "label": "Max Log 4",   "type": "text", "access": "get" },
+  "MAX_LOG5":   { "label": "Max Log 5",   "type": "text", "access": "get" },
+
+  "LOG1_WRITE": { "label": "Log 1 Write", "type": "text", "access": "get" },
+  "LOG2_WRITE": { "label": "Log 2 Write", "type": "text", "access": "get" },
+  "LOG3_WRITE": { "label": "Log 3 Write", "type": "text", "access": "get" },
+  "LOG4_WRITE": { "label": "Log 4 Write", "type": "text", "access": "get" },
+  "LOG5_WRITE": { "label": "Log 5 Write", "type": "text", "access": "get" },
+
+  "LOG1_READ":  { "label": "Log 1 Read",  "type": "text", "access": "get" },
+  "LOG2_READ":  { "label": "Log 2 Read",  "type": "text", "access": "get" },
+  "LOG3_READ":  { "label": "Log 3 Read",  "type": "text", "access": "get" },
+  "LOG4_READ":  { "label": "Log 4 Read",  "type": "text", "access": "get" },
+  "LOG5_READ":  { "label": "Log 5 Read",  "type": "text", "access": "get" },
+
+  "LOG1_UNREAD": { "label": "Log 1 Unread", "type": "text", "access": "get" },
+  "LOG2_UNREAD": { "label": "Log 2 Unread", "type": "text", "access": "get" },
+  "LOG3_UNREAD": { "label": "Log 3 Unread", "type": "text", "access": "get" },
+  "LOG4_UNREAD": { "label": "Log 4 Unread", "type": "text", "access": "get" },
+  "LOG5_UNREAD": { "label": "Log 5 Unread", "type": "text", "access": "get" },
+
+  "CLEAR_LOG1": { "label": "Clear Log 1", "type": "text", "access": "set" },
+  "CLEAR_LOG2": { "label": "Clear Log 2", "type": "text", "access": "set" },
+  "CLEAR_LOG3": { "label": "Clear Log 3", "type": "text", "access": "set" },
+  "CLEAR_LOG4": { "label": "Clear Log 4", "type": "text", "access": "set" },
+  "CLEAR_LOG5": { "label": "Clear Log 5", "type": "text", "access": "set" }
+}
+,
+      "SYS": {
+  "LPPERIOD": {
+    "label": "Low-Power sleep period (s)",
+    "type": "text",
+    "access": "getset"
+  },
+  "AUTORESTART": {
+    "label": "Auto-restart period (s) (0=Disabled)",
+    "type": "text",
+    "access": "getset"
+  },
+  "RESET_REASON": {
+    "label": "Reset Reason",
+    "type": "choice",
+    "access": "get",
+    "choices": {
+      "0": "UNKNOWN",
+      "1": "POWER",
+      "2": "SYSTEM",
+      "3": "HARDWARE WDG",
+      "4": "SOFTWARE WDG"
+    }
+  }
+},"GSM": {
+  "SYNC_PERIOD": {
+    "label": "Synchronization period (min)",
+    "type": "text",
+    "access": "getset"
+  },
+  "TIME": {
+    "label": "Time (ISO-8601: YYYY-MM-DDThh:mm:ss)",
+    "type": "text",
+    "access": "get"
+  }
+}
+
+    },
+    "menzu_ijen_stm32l496": {
+      "ZigBee": {
+        "TYPE": {
+          "label": "Type de ZigBee",
+          "type": "choice",
+          "choices": {
+            "0": "S2X",
+            "1": "XBee3",
+            "2": "SX868"
+          },
+          "access": "getset"
+        },
+        "ROLE": {
+          "label": "Rôle du module",
+          "type": "choice",
+          "choices": {
+            "0": "COORDINATOR",
+            "1": "ROUTER",
+            "2": "END DEVICE"
+          },
+          "access": "getset"
+        },
+        "CTRLACK": {
+          "label": "ACK Active",
+          "type": "choice",
+          "choices": {
+            "0": "DISABLED",
+            "1": "ENABLED"
+          },
+          "access": "getset"
+        },
+        "PANID": {
+          "label": "PAN ID",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "LoRaWAN_at": {
+    "APPKEY": { "label": "Application Key",            "type": "text",   "access": "getset" },
+    "DEUI":   { "label": "DeviceEUI (and JoinEUI)",    "type": "text",   "access": "getset" },
+    "NWKKEY": { "label": "NwkKey",                      "type": "text",   "access": "getset" },
+
+    "ACT":    { "label": "Activation",                  "type": "choice", "access": "getset",
+                "choices": { "0": "ABP", "1": "OTAA" } },
+
+    "CLASS":  { "label": "Class",                       "type": "choice", "access": "getset",
+                "choices": { "0": "Class A", "1": "Class B", "2": "Class C" } },
+
+    "NJS":    { "label": "Join Status",                 "type": "choice", "access": "get",
+                "choices": { "0": "Not joined", "1": "Joined" } },
+
+    "CFM":    { "label": "Confirmed Mode",              "type": "choice", "access": "getset",
+                "choices": { "0": "Unconfirmed", "1": "Confirmed" } }
+  },
+      "GPRS ": {
+        "APN": {
+          "label": "APN Réseau",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "MODBUS_Master": {
+        "PORT": {
+          "label": "Port",
+          "type": "text",
+          "access": "get"
+        },
+         "HOST":   { "label": "Host",   "type": "text",   "access": "getset" }
+,
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+      "MODBUS_Slave": {
+
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+     "GPS": {
+  "UTC_OFFSET": {
+    "label": "Timezone UTC offset",
+    "type": "text",
+    "access": "getset"
+  },
+  "SYNC_PERIOD": {
+    "label": "Synchronization period (min)",
+    "type": "text",
+    "access": "getset"
+  },
+  "TIME": {
+    "label": "Time (ISO-8601: YYYY-MM-DDThh:mm:ss)",
+    "type": "text",
+    "access": "get"
+  },
+  "LOCATION": {
+    "label": "Location (ISO-6709: +/-DDDMMSS.S+/-DDDMMSS.S/)",
+    "type": "text",
+    "access": "get"
+  }
+}
+,
+    "NVM": {
+  "MAX_LOG1":   { "label": "Max Log 1",   "type": "text", "access": "get" },
+  "MAX_LOG2":   { "label": "Max Log 2",   "type": "text", "access": "get" },
+  "MAX_LOG3":   { "label": "Max Log 3",   "type": "text", "access": "get" },
+  "MAX_LOG4":   { "label": "Max Log 4",   "type": "text", "access": "get" },
+  "MAX_LOG5":   { "label": "Max Log 5",   "type": "text", "access": "get" },
+
+  "LOG1_WRITE": { "label": "Log 1 Write", "type": "text", "access": "get" },
+  "LOG2_WRITE": { "label": "Log 2 Write", "type": "text", "access": "get" },
+  "LOG3_WRITE": { "label": "Log 3 Write", "type": "text", "access": "get" },
+  "LOG4_WRITE": { "label": "Log 4 Write", "type": "text", "access": "get" },
+  "LOG5_WRITE": { "label": "Log 5 Write", "type": "text", "access": "get" },
+
+  "LOG1_READ":  { "label": "Log 1 Read",  "type": "text", "access": "get" },
+  "LOG2_READ":  { "label": "Log 2 Read",  "type": "text", "access": "get" },
+  "LOG3_READ":  { "label": "Log 3 Read",  "type": "text", "access": "get" },
+  "LOG4_READ":  { "label": "Log 4 Read",  "type": "text", "access": "get" },
+  "LOG5_READ":  { "label": "Log 5 Read",  "type": "text", "access": "get" },
+
+  "LOG1_UNREAD": { "label": "Log 1 Unread", "type": "text", "access": "get" },
+  "LOG2_UNREAD": { "label": "Log 2 Unread", "type": "text", "access": "get" },
+  "LOG3_UNREAD": { "label": "Log 3 Unread", "type": "text", "access": "get" },
+  "LOG4_UNREAD": { "label": "Log 4 Unread", "type": "text", "access": "get" },
+  "LOG5_UNREAD": { "label": "Log 5 Unread", "type": "text", "access": "get" },
+
+  "CLEAR_LOG1": { "label": "Clear Log 1", "type": "text", "access": "set" },
+  "CLEAR_LOG2": { "label": "Clear Log 2", "type": "text", "access": "set" },
+  "CLEAR_LOG3": { "label": "Clear Log 3", "type": "text", "access": "set" },
+  "CLEAR_LOG4": { "label": "Clear Log 4", "type": "text", "access": "set" },
+  "CLEAR_LOG5": { "label": "Clear Log 5", "type": "text", "access": "set" }
+}
+,
+    "SYS": {
+  "LPPERIOD": {
+    "label": "Low-Power sleep period (s)",
+    "type": "text",
+    "access": "getset"
+  },
+  "AUTORESTART": {
+    "label": "Auto-restart period (s) (0=Disabled)",
+    "type": "text",
+    "access": "getset"
+  },
+  "RESET_REASON": {
+    "label": "Reset Reason",
+    "type": "choice",
+    "access": "get",
+    "choices": {
+      "0": "UNKNOWN",
+      "1": "POWER",
+      "2": "SYSTEM",
+      "3": "HARDWARE WDG",
+      "4": "SOFTWARE WDG"
+    }
+  }
+    },
+  "GSM": {
+  "SYNC_PERIOD": {
+    "label": "Synchronization period (min)",
+    "type": "text",
+    "access": "getset"
+  },
+  "TIME": {
+    "label": "Time (ISO-8601: YYYY-MM-DDThh:mm:ss)",
+    "type": "text",
+    "access": "get"
+  }
+}
+
+  }
+,
+    "micro_menzu_samd21g18a": {
+      "ZigBee": {
+        "TYPE": {
+          "label": "Type de ZigBee",
+          "type": "choice",
+          "choices": {
+            "0": "S2X",
+            "1": "XBee3",
+            "2": "SX868"
+          },
+          "access": "getset"
+        },
+        "ROLE": {
+          "label": "Rôle du module",
+          "type": "choice",
+          "choices": {
+            "0": "COORDINATOR",
+            "1": "ROUTER",
+            "2": "END DEVICE"
+          },
+          "access": "getset"
+        },
+        "CTRLACK": {
+          "label": "ACK Active",
+          "type": "choice",
+          "choices": {
+            "0": "DISABLED",
+            "1": "ENABLED"
+          },
+          "access": "getset"
+        },
+        "PANID": {
+          "label": "PAN ID",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "LoRaWAN_at": {
+    "APPKEY": { "label": "Application Key",            "type": "text",   "access": "getset" },
+    "DEUI":   { "label": "DeviceEUI (and JoinEUI)",    "type": "text",   "access": "getset" },
+    "NWKKEY": { "label": "NwkKey",                      "type": "text",   "access": "getset" },
+
+    "ACT":    { "label": "Activation",                  "type": "choice", "access": "getset",
+                "choices": { "0": "ABP", "1": "OTAA" } },
+
+    "CLASS":  { "label": "Class",                       "type": "choice", "access": "getset",
+                "choices": { "0": "Class A", "1": "Class B", "2": "Class C" } },
+
+    "NJS":    { "label": "Join Status",                 "type": "choice", "access": "get",
+                "choices": { "0": "Not joined", "1": "Joined" } },
+
+    "CFM":    { "label": "Confirmed Mode",              "type": "choice", "access": "getset",
+                "choices": { "0": "Unconfirmed", "1": "Confirmed" } }
+  },
+      "GPRS ": {
+        "APN": {
+          "label": "APN Réseau",
+          "type": "text",
+          "access": "getset"
+        }
+      },
+      "MODBUS_Master": {
+        "PORT": {
+          "label": "Port",
+          "type": "text",
+          "access": "get"
+        },
+         "HOST":   { "label": "Host",   "type": "text",   "access": "getset" }
+,
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+      "MODBUS_Slave": {
+
+        "SPEED": {
+          "label": "Vitesse",
+          "type": "text",
+          "access": "getset"
+        },
+        "PARITY": {
+          "label": "Parité",
+          "type": "choice",
+          "choices": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even"
+          },
+          "access": "getset"
+        }
+      },
+     "GPS": {
+  "UTC_OFFSET": {
+    "label": "Timezone UTC offset",
+    "type": "text",
+    "access": "getset"
+  },
+  "SYNC_PERIOD": {
+    "label": "Synchronization period (min)",
+    "type": "text",
+    "access": "getset"
+  },
+  "TIME": {
+    "label": "Time (ISO-8601: YYYY-MM-DDThh:mm:ss)",
+    "type": "text",
+    "access": "get"
+  },
+  "LOCATION": {
+    "label": "Location (ISO-6709: +/-DDDMMSS.S+/-DDDMMSS.S/)",
+    "type": "text",
+    "access": "get"
+  }
+}
+,
+    "NVM": {
+  "MAX_LOG1":   { "label": "Max Log 1",   "type": "text", "access": "get" },
+  "MAX_LOG2":   { "label": "Max Log 2",   "type": "text", "access": "get" },
+  "MAX_LOG3":   { "label": "Max Log 3",   "type": "text", "access": "get" },
+  "MAX_LOG4":   { "label": "Max Log 4",   "type": "text", "access": "get" },
+  "MAX_LOG5":   { "label": "Max Log 5",   "type": "text", "access": "get" },
+
+  "LOG1_WRITE": { "label": "Log 1 Write", "type": "text", "access": "get" },
+  "LOG2_WRITE": { "label": "Log 2 Write", "type": "text", "access": "get" },
+  "LOG3_WRITE": { "label": "Log 3 Write", "type": "text", "access": "get" },
+  "LOG4_WRITE": { "label": "Log 4 Write", "type": "text", "access": "get" },
+  "LOG5_WRITE": { "label": "Log 5 Write", "type": "text", "access": "get" },
+
+  "LOG1_READ":  { "label": "Log 1 Read",  "type": "text", "access": "get" },
+  "LOG2_READ":  { "label": "Log 2 Read",  "type": "text", "access": "get" },
+  "LOG3_READ":  { "label": "Log 3 Read",  "type": "text", "access": "get" },
+  "LOG4_READ":  { "label": "Log 4 Read",  "type": "text", "access": "get" },
+  "LOG5_READ":  { "label": "Log 5 Read",  "type": "text", "access": "get" },
+
+  "LOG1_UNREAD": { "label": "Log 1 Unread", "type": "text", "access": "get" },
+  "LOG2_UNREAD": { "label": "Log 2 Unread", "type": "text", "access": "get" },
+  "LOG3_UNREAD": { "label": "Log 3 Unread", "type": "text", "access": "get" },
+  "LOG4_UNREAD": { "label": "Log 4 Unread", "type": "text", "access": "get" },
+  "LOG5_UNREAD": { "label": "Log 5 Unread", "type": "text", "access": "get" },
+
+  "CLEAR_LOG1": { "label": "Clear Log 1", "type": "text", "access": "set" },
+  "CLEAR_LOG2": { "label": "Clear Log 2", "type": "text", "access": "set" },
+  "CLEAR_LOG3": { "label": "Clear Log 3", "type": "text", "access": "set" },
+  "CLEAR_LOG4": { "label": "Clear Log 4", "type": "text", "access": "set" },
+  "CLEAR_LOG5": { "label": "Clear Log 5", "type": "text", "access": "set" }
+}
+,
+   "SYS": {
+  "LPPERIOD": {
+    "label": "Low-Power sleep period (s)",
+    "type": "text",
+    "access": "getset"
+  },
+  "AUTORESTART": {
+    "label": "Auto-restart period (s) (0=Disabled)",
+    "type": "text",
+    "access": "getset"
+  },
+  "RESET_REASON": {
+    "label": "Reset Reason",
+    "type": "choice",
+    "access": "get",
+    "choices": {
+      "0": "UNKNOWN",
+      "1": "POWER",
+      "2": "SYSTEM",
+      "3": "HARDWARE WDG",
+      "4": "SOFTWARE WDG"
+    }
+  }
+}
+    },
+    "nano_menzu_stm32l082": {
+      "LoRaWAN_at": {
+    "APPKEY": { "label": "Application Key",            "type": "text",   "access": "getset" },
+    "DEUI":   { "label": "DeviceEUI (and JoinEUI)",    "type": "text",   "access": "getset" },
+    "NWKKEY": { "label": "NwkKey",                      "type": "text",   "access": "getset" },
+
+    "ACT":    { "label": "Activation",                  "type": "choice", "access": "getset",
+                "choices": { "0": "ABP", "1": "OTAA" } },
+
+    "CLASS":  { "label": "Class",                       "type": "choice", "access": "getset",
+                "choices": { "0": "Class A", "1": "Class B", "2": "Class C" } },
+
+    "NJS":    { "label": "Join Status",                 "type": "choice", "access": "get",
+                "choices": { "0": "Not joined", "1": "Joined" } },
+
+    "CFM":    { "label": "Confirmed Mode",              "type": "choice", "access": "getset",
+                "choices": { "0": "Unconfirmed", "1": "Confirmed" } }
+  },
+    "NVM": {
+  "MAX_LOG1":   { "label": "Max Log 1",   "type": "text", "access": "get" },
+  "MAX_LOG2":   { "label": "Max Log 2",   "type": "text", "access": "get" },
+  "MAX_LOG3":   { "label": "Max Log 3",   "type": "text", "access": "get" },
+  "MAX_LOG4":   { "label": "Max Log 4",   "type": "text", "access": "get" },
+  "MAX_LOG5":   { "label": "Max Log 5",   "type": "text", "access": "get" },
+
+  "LOG1_WRITE": { "label": "Log 1 Write", "type": "text", "access": "get" },
+  "LOG2_WRITE": { "label": "Log 2 Write", "type": "text", "access": "get" },
+  "LOG3_WRITE": { "label": "Log 3 Write", "type": "text", "access": "get" },
+  "LOG4_WRITE": { "label": "Log 4 Write", "type": "text", "access": "get" },
+  "LOG5_WRITE": { "label": "Log 5 Write", "type": "text", "access": "get" },
+
+  "LOG1_READ":  { "label": "Log 1 Read",  "type": "text", "access": "get" },
+  "LOG2_READ":  { "label": "Log 2 Read",  "type": "text", "access": "get" },
+  "LOG3_READ":  { "label": "Log 3 Read",  "type": "text", "access": "get" },
+  "LOG4_READ":  { "label": "Log 4 Read",  "type": "text", "access": "get" },
+  "LOG5_READ":  { "label": "Log 5 Read",  "type": "text", "access": "get" },
+
+  "LOG1_UNREAD": { "label": "Log 1 Unread", "type": "text", "access": "get" },
+  "LOG2_UNREAD": { "label": "Log 2 Unread", "type": "text", "access": "get" },
+  "LOG3_UNREAD": { "label": "Log 3 Unread", "type": "text", "access": "get" },
+  "LOG4_UNREAD": { "label": "Log 4 Unread", "type": "text", "access": "get" },
+  "LOG5_UNREAD": { "label": "Log 5 Unread", "type": "text", "access": "get" },
+
+  "CLEAR_LOG1": { "label": "Clear Log 1", "type": "text", "access": "set" },
+  "CLEAR_LOG2": { "label": "Clear Log 2", "type": "text", "access": "set" },
+  "CLEAR_LOG3": { "label": "Clear Log 3", "type": "text", "access": "set" },
+  "CLEAR_LOG4": { "label": "Clear Log 4", "type": "text", "access": "set" },
+  "CLEAR_LOG5": { "label": "Clear Log 5", "type": "text", "access": "set" }
+}
+,
+     "SYS": {
+  "LPPERIOD": {
+    "label": "Low-Power sleep period (s)",
+    "type": "text",
+    "access": "getset"
+  },
+  "AUTORESTART": {
+    "label": "Auto-restart period (s) (0=Disabled)",
+    "type": "text",
+    "access": "getset"
+  },
+  "RESET_REASON": {
+    "label": "Reset Reason",
+    "type": "choice",
+    "access": "get",
+    "choices": {
+      "0": "UNKNOWN",
+      "1": "POWER",
+      "2": "SYSTEM",
+      "3": "HARDWARE WDG",
+      "4": "SOFTWARE WDG"
+    }
+  }
+     }
+    ,
+  "LoRaWAN": {
+  "UID": {
+    "label": "Device UID",
+    "type": "text",
+    "access": "getset"
+  },
+  "KEY": {
+    "label": "Device Key",
+    "type": "text",
+    "access": "getset"
+  },
+  "CLASS": {
+    "label": "Class",
+    "type": "choice",
+    "access": "getset",
+    "choices": {
+      "0": "Class A",
+      "1": "Class B",
+      "2": "Class C"
+    }
+  },
+  "MSG": {
+    "label": "Message Confirmation",
+    "type": "choice",
+    "access": "getset",
+    "choices": {
+      "0": "Unconfirmed",
+      "1": "Confirmed"
+    }
+  },
+  "DR": {
+    "label": "Data Rate (0–5)",
+    "type": "text",
+    "access": "getset"
+  },
+  "ADR": {
+    "label": "Adaptive Data Rate",
+    "type": "text",
+    "access": "getset"
+  }
+}
+
+  }
+  }
+}

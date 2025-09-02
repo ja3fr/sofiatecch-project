@@ -1,0 +1,26 @@
+[
+    {
+        "name": "aze",
+        "trigger": "azeaz",
+        "mode": "ASCII",
+        "response": "eazea",
+        "response_mode": "ASCII",
+        "enabled": true
+    },
+    {
+        "name": "aa",
+        "trigger": "aaa",
+        "mode": "ASCII",
+        "response": "eee",
+        "response_mode": "ASCII",
+        "enabled": true
+    },
+    {
+        "name": "Ping",
+        "trigger": "PONG",
+        "mode": "ASCII",
+        "response": "PONG RECIVED!",
+        "response_mode": "ASCII",
+        "enabled": true
+    }
+]

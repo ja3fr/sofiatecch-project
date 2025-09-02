@@ -1,0 +1,164 @@
+/* =================================================================== */
+/* Fichier : style.qss - Thème "Modern Tech" (Sombre) Amélioré         */
+/* =================================================================== */
+
+/* --- Style Général de l'Application --- */
+QWidget {
+    background-color: #2b2b2b;
+    color: #dcdcdc;
+    font-family: Segoe UI, sans-serif;
+    font-size: 10pt;
+    border: none;
+}
+
+/* --- Barre d'Outils --- */
+QToolBar {
+    background-color: #3c3c3c;
+    padding: 2px;
+    spacing: 5px;
+}
+QToolButton {
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 4px;
+}
+QToolButton:hover { background-color: #555555; }
+QToolButton:pressed { background-color: #444444; }
+
+/* --- Groupes et Titres --- */
+QGroupBox {
+    background-color: #3c3c3c;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    margin-top: 8px;
+    padding: 10px; /* Ajoute de l'espace à l'intérieur du groupe */
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    left: 10px;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+/* --- Boutons de Navigation --- */
+QPushButton#NavButton {
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: transparent;
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+QPushButton#NavButton:hover { background-color: #444444; }
+QPushButton#NavButton:checked {
+    background-color: #3c3c3c;
+    color: #00aaff;
+    border-bottom: 3px solid #00aaff;
+}
+
+/* --- Boutons Standard --- */
+QPushButton {
+    background-color: #555555;
+    border: 1px solid #666666;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+QPushButton:hover { background-color: #666666; border-color: #777777; }
+QPushButton:pressed { background-color: #4a4a4a; }
+QPushButton:checked {
+    background-color: #0078d7;
+    border-color: #005a9e;
+    color: white;
+}
+
+/* --- Tableaux (AMÉLIORÉ) --- */
+QTableWidget {
+    background-color: #2b2b2b;
+    gridline-color: #444444;
+    border: 1px solid #444444;
+    border-radius: 4px;
+}
+QHeaderView::section {
+    background-color: #3c3c3c;
+    color: #dcdcdc;
+    padding: 6px;
+    font-weight: bold;
+    /* --- THE FIX IS HERE --- */
+    /* Remove the 'border: none;' and define each border separately */
+    border-top: none;
+    border-left: none; /* No border on the far left */
+    border-right: 1px solid #555555; /* Visible vertical line */
+    border-bottom: 1px solid #555555; /* Visible horizontal line */
+}
+/* Style pour les cellules */
+QTableWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #444444;
+}
+/* Style pour la ligne sélectionnée */
+QTableWidget::item:selected {
+    background-color: #0078d7;
+    color: #ffffff;
+}
+
+/* --- Champs de Saisie --- */
+QLineEdit, QComboBox, QTextEdit {
+    background-color: #252525;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 4px;
+}
+QLineEdit:focus, QComboBox:focus, QTextEdit:focus {
+    border: 1px solid #0078d7;
+}
+
+/* --- LE TERMINAL --- */
+QTextEdit#TerminalDisplay {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 10pt;
+    border-radius: 4px;
+}
+QLineEdit#TerminalInput {
+    background-color: #1e1e1e;
+    color: #cccccc;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 10pt;
+    border: 1px solid #555555;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+/* --- Barres de Défilement --- */
+QScrollBar:vertical {
+    border: none; background: #2b2b2b; width: 10px; margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #555555; min-height: 20px; border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar:horizontal {
+    border: none; background: #2b2b2b; height: 10px; margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #555555; min-width: 20px; border-radius: 5px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* --- Style pour les boutons à icône dans les tableaux --- */
+QPushButton#TableIconButton {
+    padding: 2px;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+}
+QPushButton#TableIconButton:hover {
+    background-color: #555555;
+}

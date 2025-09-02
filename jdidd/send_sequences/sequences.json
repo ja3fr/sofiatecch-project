@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Get Device ID",
+        "sequence": "GET_ID\\n",
+        "mode": "ASCII"
+    },
+    {
+        "name": "Start Data Logging",
+        "sequence": "START\\n",
+        "mode": "ASCII"
+    },
+    {
+        "name": "Stop Data Logging",
+        "sequence": "STOP\\n",
+        "mode": "ASCII"
+    },
+    {
+        "name": "Allumer LED",
+        "sequence": "LED_ON\\n",
+        "mode": "ASCII"
+    },
+    {
+        "name": "Eteindre LED",
+        "sequence": "LED_OFF\\n",
+        "mode": "ASCII"
+    },
+    {
+        "name": "eazeaz",
+        "sequence": "azeza",
+        "mode": "ASCII"
+    }
+]

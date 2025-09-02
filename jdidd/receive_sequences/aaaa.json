@@ -1,0 +1,42 @@
+[
+    {
+        "name": "eazezae",
+        "trigger": "ea",
+        "mode": "ASCII",
+        "response": "eazee",
+        "response_mode": "ASCII",
+        "enabled": false
+    },
+    {
+        "name": "eeeeeeeeeeeee",
+        "trigger": "eee",
+        "mode": "ASCII",
+        "response": "ee",
+        "response_mode": "ASCII",
+        "enabled": false
+    },
+    {
+        "name": "aa",
+        "trigger": "zez",
+        "mode": "ASCII",
+        "answer": "eaze",
+        "anwser_mode": "ASCII",
+        "enabled": true
+    },
+    {
+        "name": "aaffff",
+        "trigger": "ezzeze",
+        "mode": "ASCII",
+        "response": "aaaaa",
+        "response_mode": "ASCII",
+        "enabled": true
+    },
+    {
+        "name": "azez",
+        "trigger": "eazea",
+        "mode": "ASCII",
+        "answer": "eazeae",
+        "answer_mode": "ASCII",
+        "enabled": true
+    }
+]
